@@ -1,6 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+// O(N^2) --> best, average, worst case time complexity
+
 int main()
 {
 	int t;
@@ -14,7 +16,7 @@ int main()
 			for (int i = 0; i <= n-2; ++i)
 			{
 				int mini = i;
-				for (int j = i; j <= n; ++j){
+				for (int j = i; j <= n-1; ++j){
 					if(arr[j] < arr[mini]) mini = j;
 				}
 				swap(arr[i], arr[mini]);
